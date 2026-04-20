@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Encryption Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Web-Based Text Encryption Tool</h1>
+        <textarea id="plainText" placeholder="Enter plain text here..."></textarea>
+        <select id="algorithm">
+            <option value="">Select Encryption Algorithm</option>
+            <option value="caesar">Caesar Cipher</option>
+            <option value="aes">AES</option>
+            <option value="base64">Base64</option>
+        </select>
+        <input type="number" id="shift" placeholder="Shift value (for Caesar Cipher, 1-25)" min="1" max="25" value="3">
+        <input type="text" id="passphrase" placeholder="Passphrase (for AES)">
+        <button id="encryptButton">Encrypt</button>
+        <button id="decryptButton">Decrypt</button>
+        <button id="copyButton">Copy to Clipboard</button>
+        <textarea id="cipherText" placeholder="Ciphertext will appear here..." readonly></textarea>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
